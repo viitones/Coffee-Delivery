@@ -8,3 +8,6 @@ npm i @rocketseat/eslint-config -D
 
 Router Dom ->
 npm i react-router-dom
+
+Icons -> 
+@phosphor-icons/react
