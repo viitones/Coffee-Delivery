@@ -36,7 +36,6 @@ export const CartContainer = styled.a`
   justify-content: center;
 
   svg {
-    fill: ${(prop) => prop.theme['dark-yellow']};
     margin-right: 0.25rem;
   }
 `

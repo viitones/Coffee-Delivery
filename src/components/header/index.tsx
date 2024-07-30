@@ -1,9 +1,12 @@
 import { CartContainer, HeaderContainer } from './styles'
 
 import { MapPin, ShoppingCart } from '@phosphor-icons/react'
+import { useTheme } from 'styled-components'
 import logotipo from '../../assets/logotipo.svg'
 
 export function Header() {
+  const theme = useTheme()
+
   return (
     <HeaderContainer>
       <div>
@@ -15,7 +18,7 @@ export function Header() {
           Porto Alegre, RS
         </div>
         <CartContainer href="#">
-          <ShoppingCart size={22} weight="fill" />
+          <ShoppingCart color={theme['dark-yellow']} size={22} weight="fill" />
         </CartContainer>
       </nav>
     </HeaderContainer>
