@@ -3,11 +3,14 @@ import { mixins } from '../../styles/mixins'
 
 export const HeaderMenu = styled.header`
   width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+  
+  padding: 2rem 1.25rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 2rem 10rem;
 
   img {
     width: 5rem;
