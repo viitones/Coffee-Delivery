@@ -1,8 +1,17 @@
 import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
-import { AsideHero, DeliverContainer, Hero, HeroContent } from './styles'
+import {
+  AsideHero,
+  CardContent,
+  DeliverContainer,
+  Hero,
+  HeroContent,
+} from './styles'
+
+import { coffees } from '../../../data.json'
 
 import coffeeCoup from '../../assets/coffee-coup.svg'
 import heroBg from '../../assets/hero-bg.svg'
+import { Card } from './components/Card'
 
 export function Menu() {
   return (
@@ -42,6 +51,19 @@ export function Menu() {
       </HeroContent>
 
       <img src={heroBg} alt="" />
+
+      <CardContent>
+        <h2>Nossos cafés</h2>
+
+        <div>
+          {coffees.map(coffee => {
+            return (
+              <Card key={coffee.id} coffee={coffee} />
+            )
+          })}
+        </div>
+      </CardContent>
+
     </Hero>
   )
 }

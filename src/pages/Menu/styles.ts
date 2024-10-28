@@ -4,16 +4,21 @@ import { mixins } from '../../styles/mixins'
 export const Hero = styled.section`
   position: relative;
 
+  > div {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
   > img {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     max-height: 34rem;
 
     top: 0;
     left: 0;
     object-fit: cover;
   }
-  `
+`
 
 export const HeroContent = styled.section`
   width: 100%;
@@ -99,5 +104,21 @@ export const DeliverContainer = styled.div`
     color: white;
 
     border-radius: 99999px;
+  }
+`
+
+export const CardContent = styled.section`
+  width: 100%;
+  max-width: 75rem;
+
+  margin-inline: auto;
+  margin-top: 2rem;
+  padding-inline: 1.25rem;
+
+  > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2.5rem;
   }
 `
